@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>jihaNews | L'info en 60 s</title>
+<meta name="description" content="jihaNews : l'actu du jour en français, vérifiée et expliquée en animation, en moins d'une minute. Tous nos comptes au même endroit.">
+<meta property="og:title" content="jihaNews | L'info en 60 s">
+<meta property="og:description" content="L'actu du jour, vérifiée et expliquée en animation. Tous nos comptes au même endroit.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0d0f12">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0d0f12;
+    --card: #161a20;
+    --card-hover: #1d222a;
+    --line: #262c35;
+    --text: #f2f4f7;
+    --muted: #9aa3ae;
+    --orange: #f0a12e;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--bg); color: var(--text); }
+  body {
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 48px 20px 32px;
+    -webkit-font-smoothing: antialiased;
+  }
+  main { width: 100%; max-width: 440px; }
+
+  header { text-align: center; margin-bottom: 28px; }
+  .mark {
+    font-weight: 800;
+    font-size: 44px;
+    letter-spacing: -1.5px;
+    line-height: 1;
+  }
+  .mark .news { color: var(--orange); }
+  .cursor {
+    display: inline-block;
+    width: 18px; height: 5px;
+    background: var(--orange);
+    margin-left: 3px;
+    vertical-align: baseline;
+    animation: blink 1.1s steps(1) infinite;
+  }
+  @keyframes blink { 50% { opacity: 0; } }
+  @media (prefers-reduced-motion: reduce) { .cursor { animation: none; } }
+  .tagline {
+    margin-top: 14px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .sub {
+    margin-top: 6px;
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  .links { display: flex; flex-direction: column; gap: 10px; }
+  .links a {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 16px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    color: var(--text);
+    text-decoration: none;
+    transition: background .15s, border-color .15s, transform .15s;
+  }
+  .links a:hover, .links a:focus-visible {
+    background: var(--card-hover);
+    border-color: var(--orange);
+    transform: translateY(-1px);
+    outline: none;
+  }
+  .tag {
+    flex: 0 0 auto;
+    width: 40px; height: 40px;
+    border-radius: 10px;
+    display: grid; place-items: center;
+    background: #20252d;
+    color: var(--orange);
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: .3px;
+  }
+  .label { flex: 1; min-width: 0; }
+  .label strong { display: block; font-size: 15px; font-weight: 600; }
+  .label span { display: block; font-size: 13px; color: var(--muted); margin-top: 2px; }
+  .arrow { color: var(--muted); font-size: 18px; }
+
+  .formats {
+    margin-top: 28px;
+    padding: 18px 16px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+  }
+  .formats h2 {
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 12px;
+  }
+  .formats ul { list-style: none; display: grid; gap: 10px; }
+  .formats li { font-size: 14px; line-height: 1.45; color: var(--muted); }
+  .formats li b { color: var(--text); font-weight: 600; }
+
+  footer {
+    margin-top: 28px;
+    text-align: center;
+    font-size: 12.5px;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+  footer a { color: var(--text); text-decoration: none; border-bottom: 1px solid var(--line); }
+  footer a:hover { border-color: var(--orange); }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="mark" aria-label="jihaNews">jiha<span class="news">News</span><span class="cursor" aria-hidden="true"></span></div>
+    <p class="tagline">L'info du jour en 60 secondes.</p>
+    <p class="sub">Vérifiée, sourcée et expliquée en animation.</p>
+  </header>
+
+  <nav class="links" aria-label="Nos comptes">
+    <a href="https://www.instagram.com/jihanewsworld/" rel="noopener">
+      <span class="tag">IG</span>
+      <span class="label"><strong>Instagram</strong><span>@jihanewsworld</span></span>
+      <span class="arrow" aria-hidden="true">›</span>
+    </a>
+    <a href="https://www.tiktok.com/@jihanewsworld" rel="noopener">
+      <span class="tag">TT</span>
+      <span class="label"><strong>TikTok</strong><span>@jihanewsworld</span></span>
+      <span class="arrow" aria-hidden="true">›</span>
+    </a>
+    <a href="https://www.youtube.com/@jihanewsworld" rel="noopener">
+      <span class="tag">YT</span>
+      <span class="label"><strong>YouTube</strong><span>Brief, Flash et Focus</span></span>
+      <span class="arrow" aria-hidden="true">›</span>
+    </a>
+    <a href="https://x.com/jihanewsworld" rel="noopener">
+      <span class="tag">X</span>
+      <span class="label"><strong>X</strong><span>@jihanewsworld</span></span>
+      <span class="arrow" aria-hidden="true">›</span>
+    </a>
+    <a href="https://www.linkedin.com/company/jihanews" rel="noopener">
+      <span class="tag">in</span>
+      <span class="label"><strong>LinkedIn</strong><span>Page jihaNews</span></span>
+      <span class="arrow" aria-hidden="true">›</span>
+    </a>
+  </nav>
+
+  <section class="formats" aria-labelledby="f-title">
+    <h2 id="f-title">Au programme</h2>
+    <ul>
+      <li><b>Le brief</b>, chaque matin : l'essentiel du jour en Monde, Tech &amp; IA et Finance.</li>
+      <li><b>Le Flash</b> : une info, expliquée en moins de 40 secondes.</li>
+      <li><b>Le Focus</b>, trois soirs par semaine : un sujet qui te concerne, 5 faits vérifiés et 4 conseils.</li>
+      <li><b>Le best-of</b>, chaque dimanche : la semaine en une vidéo.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>Sources citées sur chaque publication. Voix off générée par IA.</p>
+    <p>Contact : <a href="mailto:jihanews@jiha.tech">jihanews@jiha.tech</a></p>
+  </footer>
+</main>
+</body>
+</html>
